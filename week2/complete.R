@@ -13,6 +13,8 @@ complete <- function(directory, id = 1:332) {
   ## where 'id' is the monitor ID number and 'nobs' is the
   ## number of complete cases
   
+  if(!exists("getmonitor", mode="function")) source("getmonitor.R", local = TRUE)
+  
   nobs <- vector()
   
   for(i in id)
