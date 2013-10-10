@@ -1,4 +1,4 @@
-compdata-003
+compdata
 ============
 
 Computing for Data Analysis (Johns Hopkins University)
