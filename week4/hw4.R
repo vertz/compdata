@@ -22,9 +22,7 @@ count <- function(cause = NULL) {
   else stop("invalid cause")
   
   homicides <- readLines("homicides.txt")
-  
-  cause_reg <- paste0("<dd>[Cc]ause: ",cause_reg,"</dd>")
-  
+  cause_reg <- paste0("<dd>[Cc]ause: ", cause_reg, "</dd>")
   sum(grepl(cause_reg, homicides))
 }
 
@@ -41,6 +39,6 @@ agecount <- function(age = NULL) {
   else if(as.numeric(age) < 0) stop("age is negative")
   
   homicides <- readLines("homicides.txt")
-  cause_reg <- paste0("(.*?) ",age,"( *)[Yy]ears [Oo]ld</dd>")
+  cause_reg <- paste0("(.*?) ", age, "( *)[Yy]ears [Oo]ld</dd>")
   sum(grepl(cause_reg, homicides))
 }
